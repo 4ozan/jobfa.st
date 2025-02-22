@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>LinkedIn Jobs Finder</title>
+    <style>
+        body {
+            width: 300px;
+            padding: 15px;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .status {
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #f0f0f0;
+        }
+        .controls {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        select, button {
+            padding: 8px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+        button {
+            background-color: #0077b5;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #006097;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>LinkedIn Jobs Finder</h2>
+        
+        <div class="status" id="status">
+            Status: Checking...
+        </div>
+
+        <div class="controls">
+            <label for="customMinutes">Select Minutes:</label>
+            <select id="customMinutes">
+                <option value="1">1 minute</option>
+                <option value="2">2 minutes</option>
+                <option value="5">5 minutes</option>
+                <option value="10">10 minutes</option>
+                <option value="15">15 minutes</option>
+            </select>
+            <button id="toggleButton">Start</button>
+        </div>
+
+        <div class="info">
+            <p>This extension automatically modifies LinkedIn job search to show the most recent listings.</p>
+        </div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>
